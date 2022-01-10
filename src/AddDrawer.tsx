@@ -63,15 +63,24 @@ export default function AddDrawer() {
           <Grid item xs={6}>
             <TextField
               id="outlined-basic"
+              label="Username"
+              variant="outlined"
+              color="secondary"
+            />
+          </Grid>
+        </Grid>
+
+        <Grid className={classes.gridLine} container spacing={2}>
+          <Grid item xs={6}>
+            <TextField
+              id="outlined-basic"
               label="Email"
               variant="outlined"
               color="secondary"
               type="email"
             />
           </Grid>
-        </Grid>
 
-        <Grid className={classes.gridLine} container spacing={2}>
           <Grid item xs={6}>
             <TextField
               id="outlined-basic"
@@ -81,15 +90,15 @@ export default function AddDrawer() {
               required
             />
           </Grid>
+        </Grid>
 
-          <Grid item xs={6}>
-            <TextField
-              id="outlined-basic"
-              label="Website"
-              variant="outlined"
-              color="secondary"
-            />
-          </Grid>
+        <Grid className={classes.gridLine}>
+          <TextField
+            id="outlined-basic"
+            label="Website"
+            variant="outlined"
+            color="secondary"
+          />
         </Grid>
 
         <Typography variant="subtitle1">Address</Typography>
@@ -171,7 +180,7 @@ export default function AddDrawer() {
           type="submit"
           color="secondary"
           variant="contained"
-          style={{ borderRadius: 30 }}
+          style={{ borderRadius: 20, marginBottom: 20 }}
         >
           Done
         </Button>
