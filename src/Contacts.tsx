@@ -439,7 +439,12 @@ export default function Contacts() {
                         <TableCell align="right">{contact.website}</TableCell>
                         <TableCell align="right">{contact.phone}</TableCell>
                       </TableRow>
-                      {isOpenDialog && <ContactDetail contact={contact} />}
+                      {isOpenDialog && (
+                        <ContactDetail
+                          setOpenDialogId={setOpenDialogId}
+                          contact={contact}
+                        />
+                      )}
                     </Fragment>
                   );
                 })}

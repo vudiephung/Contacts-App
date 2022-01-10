@@ -19,12 +19,19 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ContactDetail({ contact }: { contact: Contact }) {
+export default function ContactDetail({
+  contact,
+  setOpenDialogId,
+}: {
+  contact: Contact;
+  setOpenDialogId: React.Dispatch<React.SetStateAction<number>>;
+}) {
   const [open, setOpen] = React.useState(true);
   const classes = useStyles();
 
   const handleClose = () => {
     setOpen(false);
+    setOpenDialogId(-1);
   };
 
   return (
